@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>dataTypeNumber.py</StartupFile>
+    <StartupFile>dataTypeString.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="dataTypeNumber.py" />
+    <Compile Include="dataTypeString.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|2.7" />
