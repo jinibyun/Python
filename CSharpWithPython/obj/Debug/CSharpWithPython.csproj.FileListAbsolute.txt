@@ -1,0 +1,14 @@
+G:\Jini\CSharpWithPython\bin\Debug\CSharpWithPython.exe.config
+G:\Jini\CSharpWithPython\bin\Debug\CSharpWithPython.exe
+G:\Jini\CSharpWithPython\bin\Debug\CSharpWithPython.pdb
+G:\Jini\CSharpWithPython\bin\Debug\IronPython.dll
+G:\Jini\CSharpWithPython\bin\Debug\Microsoft.Dynamic.dll
+G:\Jini\CSharpWithPython\bin\Debug\Microsoft.Scripting.dll
+G:\Jini\CSharpWithPython\bin\Debug\Microsoft.Scripting.Metadata.dll
+G:\Jini\CSharpWithPython\bin\Debug\IronPython.xml
+G:\Jini\CSharpWithPython\bin\Debug\Microsoft.Dynamic.xml
+G:\Jini\CSharpWithPython\bin\Debug\Microsoft.Scripting.xml
+G:\Jini\CSharpWithPython\bin\Debug\Microsoft.Scripting.Metadata.xml
+G:\Jini\CSharpWithPython\obj\Debug\CSharpWithPython.csprojResolveAssemblyReference.cache
+G:\Jini\CSharpWithPython\obj\Debug\CSharpWithPython.exe
+G:\Jini\CSharpWithPython\obj\Debug\CSharpWithPython.pdb
