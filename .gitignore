@@ -1,0 +1,14 @@
+/HelloWorld/HelloWorld/bin
+/HelloWorld/HelloWorld/obj
+/HelloWorld/HelloWorld.Android/bin
+/HelloWorld/HelloWorld.Android/obj
+bin
+/HelloWorld/HelloWorld.iOS/bin
+/HelloWorld/HelloWorld.iOS/obj
+/HelloWorld/HelloWorld.UWP/bin
+/HelloWorld/HelloWorld.UWP/obj
+/*.gitignore
+/documents/*.zip
+*.zip
+*.pdf
+obj
