@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>dataTypeList.py</StartupFile>
+    <StartupFile>dataTypeTuple.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +27,9 @@
     </Compile>
     <Compile Include="dataTypeNumber.py" />
     <Compile Include="dataTypeString.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataTypeTuple.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
