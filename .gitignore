@@ -12,3 +12,4 @@ bin
 *.zip
 *.pdf
 obj
+/CSharpWithPython/.vs/CSharpWithPython/v15/*.suo
