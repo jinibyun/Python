@@ -2,7 +2,7 @@
 # similar to list
 
 # diffrences: 
-# 1 .use ( ) instead of []
+# 1. use ( ) instead of []
 # 2. cannot be modified like list
 
 # e.g

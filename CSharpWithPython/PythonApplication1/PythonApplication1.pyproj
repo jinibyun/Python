@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>dataTypeTuple.py</StartupFile>
+    <StartupFile>dataTypeDictionary.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="dataTypeDictionary.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="dataTypeList.py">
       <SubType>Code</SubType>
     </Compile>
