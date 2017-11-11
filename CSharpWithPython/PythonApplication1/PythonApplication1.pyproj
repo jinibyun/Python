@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>variable.py</StartupFile>
+    <StartupFile>for.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -41,7 +41,16 @@
     <Compile Include="dataTypeTuple.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="for.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="if.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="variable.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="while.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
