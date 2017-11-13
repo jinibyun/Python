@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>class.py</StartupFile>
+    <StartupFile>module1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -59,7 +59,7 @@
     <Compile Include="inputOutput.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="module.py">
+    <Compile Include="module1.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="variable.py">
