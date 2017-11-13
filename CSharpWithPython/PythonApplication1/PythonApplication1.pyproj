@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>for.py</StartupFile>
+    <StartupFile>function.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -42,6 +42,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="for.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="function.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="if.py">
