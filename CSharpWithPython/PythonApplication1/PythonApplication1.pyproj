@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>function.py</StartupFile>
+    <StartupFile>class.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="class.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="dataTypeBoolean.py">
       <SubType>Code</SubType>
     </Compile>
@@ -41,6 +44,9 @@
     <Compile Include="dataTypeTuple.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="fileHandling.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="for.py">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +54,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="if.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="inputOutput.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="variable.py">
