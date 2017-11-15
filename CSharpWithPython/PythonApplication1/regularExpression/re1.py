@@ -1,5 +1,21 @@
 import re 
 
+
+# []: character class. Any character (NOT all characters)
+# [a-zA-Z] : any alphabet char
+# [0-9] : any number
+# ^ inside [] : it means NOT
+# [^0-9] : only alphabet (any)
+
+# short cut
+# \d - number. same as [0-9]
+# \D - same as [^0-9]
+# \s - whitespace [ \t\n\r\f\v] " " means sapce
+# \S - same as [^ \t\n\r\f\v]
+# \w - same as [a-zA-Z0-9]
+# \W - same as [^a-zA-Z0-9]
+
+
 data = """
 park 800905-1049118
 kim  700905-1059119
