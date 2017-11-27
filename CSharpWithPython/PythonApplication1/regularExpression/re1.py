@@ -24,7 +24,7 @@ kim  700905-1059119
 pat = re.compile("(\d{6})[-]\d{7}")
 print(pat.sub("\g<1>-*******", data))
 
-
+""
 print("---------- match method ------------")
 p = re.compile('[a-z]+')
 m = p.match("python")
@@ -33,7 +33,7 @@ print(m)
 m = p.match("3 python")
 print(m)
 
-# print in more detail
+print("---------- print in more detail ------------")
 m = p.match('string goes here')
 if m:
     print('Match found: ', m.group())
@@ -75,7 +75,7 @@ m = p.match('a\nb')
 print(m)
 
 
-p = re.compile('[a-z]', re.I) # case-insensitive
+p = re.compile('[a-z]', re.I) # case-insensitive: re.I is equal to re.IGNORECASE
 m = p.match('PYTHON')
 print(m)
 
@@ -88,7 +88,7 @@ you need python
 python three"""
 
 print(p.findall(data))
-p = re.compile("^python\s\w+", re.MULTILINE) # ^ should be recognized line by line.
+p = re.compile("^python\s\w+", re.MULTILINE) # ^ should be recognized line by line: ^ (caret) special character would be applied line by line
 print(p.findall(data))
 
 
@@ -104,7 +104,7 @@ charref = re.compile(r"""
    | x[0-9a-fA-F]+   # Hexadecimal form
  )
  ;                   # Trailing semicolon
-""", re.VERBOSE) # or re.X option
+""", re.VERBOSE) # or re.X option: space would be ignore for all string except space inside []
 
 print("------------------ raw string -----------------")
 # p = re.compile('\\\\section') should be passed to python engine, it will understand \\section. Then regular expression will work as expected.

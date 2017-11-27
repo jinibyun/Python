@@ -20,19 +20,23 @@ print(re.search('short$', 'Life is too short, you need python'))
 # \A similar to ^. But it does not care re.MULTILINE
 # \Z similar to $. But it does not care re.MULTILINE
 
-# \b: Word boundary (separated by white space): check whether left and right side of word is space or not
+print("===========Word Boundary============")
+# \b: Word boundary (separated by white space): check whether left or right side of word is space or not
 # compare
 # NOTE: \b means backspace without r (raw data)
 p = re.compile(r'\bclass\b')
 print(p.search('no class at all'))  
 print(p.search('the declassified algorithm'))
+print(p.search('one subclass is'))
 
+print ("========= Opposite of word boundary ========")
 # \B: opposite of \b
 p = re.compile(r'\Bclass\B')
 print(p.search('no class at all'))  
 print(p.search('the declassified algorithm'))
 print(p.search('one subclass is'))
 
+print ("========= Grouping ========") # check wheter it has repeating characters
 # grouping: ( )
 p = re.compile('(ABC)+')
 m = p.search('ABCABCABC OK?')
@@ -45,7 +49,7 @@ m = p.search("park 010-1234-1234")
 print(m)
 
 
-
+print ("========= Grouping Index ========")
 # group(index)
 # group(0)	matched whole string
 # group(1)	first matched string
@@ -65,11 +69,12 @@ p = re.compile(r"(\w+)\s+((\d+)[-]\d+[-]\d+)")
 m = p.search("park 010-1234-1234")
 print(m.group(3))
 
-# \1 refer to group 1
+print ("========= Grouping: Back Reference ========")
+# \1 refer to group 1: fo find same repeating word. IF want to second group, use \2
 p = re.compile(r'(\b\w+)\s+\1')
 print(p.search('Paris in the the spring').group())
 
-
+print ("========= Grouping: naming ========")
 # naming to grouping index
 # (?P<name>\w+)\s+((\d+)[-]\d+[-]\d+): (\w+) --> (?P<name>\w+)
 p = re.compile(r"(?P<name>\w+)\s+((\d+)[-]\d+[-]\d+)")
@@ -80,7 +85,7 @@ p = re.compile(r'(?P<word>\b\w+)\s+(?P=word)')
 print(p.search('Paris in the the spring').group())
 
 # Lookahead Assertions
-p = re.compile(".+")
+p = re.compile(".+:")
 m = p.search("http://google.com")
 print(m.group())
 
