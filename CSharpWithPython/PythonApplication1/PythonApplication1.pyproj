@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>regularExpression\re_receiptPrinter.py</StartupFile>
+    <StartupFile>IronPythonTest\2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -38,6 +38,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="builtinFunction.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\a020atest333.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\CustomError.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="calledFromCSharp\function.py">
@@ -86,6 +92,10 @@
     <Compile Include="inputOutput.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IronPythonTest\2.py" />
+    <Compile Include="IronPythonTest\1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="module1.py">
       <SubType>Code</SubType>
     </Compile>
@@ -127,6 +137,7 @@
   <ItemGroup>
     <Folder Include="application\" />
     <Folder Include="calledFromCSharp\" />
+    <Folder Include="IronPythonTest\" />
     <Folder Include="regularExpression\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

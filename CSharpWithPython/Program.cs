@@ -110,17 +110,18 @@ PrintMessage()
 
             dynamic scope = engine.CreateScope();
             // option 3
-            var filePath = @"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\parser.py";
+            var filePath = @"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\a020atest333.py";
             // var filePath = @"G:\Jini\git\Python\PythonApplication_wikidocs_netbook1\function.py";
             engine.ExecuteFile(filePath, scope);
 
             var parseDefintionData = new ParseDefinitionData {
-                 ExclusiveReceiptPhrases = new List<string> { "" }
+                 ExclusiveReceiptPhrases = new List<string> { "xxxxx", "yyyyy" }
             };
 
-
             var receiptString = "xxxxx 23423gq345235yt23523gq5423gh234";
-            receiptString = scope.preParse(parseDefintionData, receiptString);
+
+            var rp = scope.receiptParser();
+            receiptString = rp.preParse(parseDefintionData, receiptString);
 
             Console.WriteLine(receiptString);
         }
