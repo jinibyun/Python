@@ -115,15 +115,44 @@ PrintMessage()
             engine.ExecuteFile(filePath, scope);
 
             var parseDefintionData = new ParseDefinitionData {
-                 ExclusiveReceiptPhrases = new List<string> { "xxxxx", "yyyyy" }
+                 ExclusiveReceiptPhrases = new List<string> { "Datametrex", "yyyyy" }
             };
 
-            var receiptString = "xxxxx 23423gq345235yt23523gq5423gh234";
+            var receiptString = @"
+            Datametrex Demo             
+
+        OCTOBER 16, 2017   11:56        
+      SALE #POS-3165     S/P-STAFF      
+----------------------------------------
+DTCODE000031 CAMEL                      
+              1.00 @ 12.99         12.99
+DTCODE000022 COCA COLA CLASSIC          
+              1.00 @ 0.99           0.99
+
+                   SUBTOTAL        13.98
+ SALE        13.98
+                  PAID CASH        13.98
+----------------------------------------
+         Thank you for shopping         
+.
+.
+.
+d0
+";
 
             var rp = scope.receiptParser();
-            receiptString = rp.preParse(parseDefintionData, receiptString);
 
+            // 1. pre parse
+            receiptString = rp.preParse(parseDefintionData, receiptString);
             Console.WriteLine(receiptString);
+
+
+            // 2. Detail Summary
+            List<string> receiptStrings = new List<string>();
+            receiptStrings = rp.GetAllDetailSummary(parseDefintionData, receiptString);
+            
+
+            
         }
     }
 

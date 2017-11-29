@@ -43,9 +43,6 @@
     <Compile Include="calledFromCSharp\a020atest333.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="calledFromCSharp\CustomError.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="calledFromCSharp\function.py">
       <SubType>Code</SubType>
     </Compile>
@@ -115,9 +112,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="regularExpression\re2.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="regularExpression\re_receiptPrinter.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="variable.py">
