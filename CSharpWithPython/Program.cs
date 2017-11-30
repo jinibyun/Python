@@ -19,7 +19,7 @@ namespace CSharpWithPython
             // ExecuteIronPython2();            
             ExecuteIronPython3();
         }
-        
+
         private static void ExecuteIronPython()
         {
 
@@ -84,6 +84,7 @@ PrintMessage()
         private static void ExecuteIronPython2()
         {
             var engine = Python.CreateEngine();
+
             dynamic scope = engine.CreateScope();
             // option 3
             var filePath = @"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\function.py";
@@ -107,6 +108,10 @@ PrintMessage()
             var options = new Dictionary<string, object> { ["Debug"] = true };
             var engine = Python.CreateEngine(options);
 
+            //var paths = engine.GetSearchPaths();
+            //paths.Add(@"C:\Program Files (x86)\IronPython 2.7\");
+            //engine.SetSearchPaths(paths);
+            //engine.ImportModule("Queue");
 
             dynamic scope = engine.CreateScope();
             // option 3
@@ -114,8 +119,32 @@ PrintMessage()
             // var filePath = @"G:\Jini\git\Python\PythonApplication_wikidocs_netbook1\function.py";
             engine.ExecuteFile(filePath, scope);
 
-            var parseDefintionData = new ParseDefinitionData {
-                 ExclusiveReceiptPhrases = new List<string> { "Datametrex", "yyyyy" }
+            var parseDefintionData = new ParseDefinitionData
+            {
+                // ExclusiveReceiptPhrases = new List<string> { "Datametrex", "yyyyy" },
+                ItemStartLineNo = "6",
+                ItemEndLineText = "Thank you for shopping",
+                SummaryDataStart = new List<string> { "SUBTOTAL" },
+                SummaryDataEnd = new List<string> { "CHANGE", "PAID", "TOTAL" },
+                SummaryDataExclusivePhrases = new List<string> { "-------", "PAID", "TOTAL" },
+                
+                DetailParameter = new ParameterDetail
+                {
+                    UnitPriceSuffix = new List<string> { "TB" },
+                    IgnoreStartPoistion = -1,
+                    itemCodepattern = "^[0-9]+",
+                    isExistItemCode = true,
+                    customDelimeter = "~~"
+                },
+                SummaryParameter = new ParameterSummary
+                {
+                     ReplaceList = new Dictionary<string, string>
+                     {
+                         { "TOTAL SALE", "TOTAL" },
+                         { "DEBIT CARD", "DEBITCARD" },
+                         { "BALANCE DUE", "CHANGE" }
+                     }
+                }
             };
 
             var receiptString = @"
@@ -139,20 +168,31 @@ DTCODE000022 COCA COLA CLASSIC
 .
 d0
 ";
-
             var rp = scope.receiptParser();
 
             // 1. pre parse
             receiptString = rp.preParse(parseDefintionData, receiptString);
-            Console.WriteLine(receiptString);
+            // Console.WriteLine(receiptString);
 
-
-            // 2. Detail Summary
+            // 2. Detail and Summary
             List<string> receiptStrings = new List<string>();
             receiptStrings = rp.GetAllDetailSummary(parseDefintionData, receiptString);
-            
 
-            
+            //foreach(var member in receiptStrings)
+            //{
+            //    Console.WriteLine(member);
+            //}
+
+            // 3. Split Detail and Summary
+            var splitDetailSummary = rp.GetSplitDetailSumary(receiptStrings, parseDefintionData);
+
+            // 4. massage receipt detail & parse
+            var detailItem = splitDetailSummary[0];
+            var summaryItem = splitDetailSummary[1];
+            detailItem = rp.CleanDetailItem(detailItem, parseDefintionData);
+
+            var massagedReceiptDetail = rp.GetReceiptMassage(parseDefintionData, detailItem, "detail");
+            // ParseResultDetail = GetParseResultDetail(massagedReceiptDetail, parseDefinitionData, parseDefinitionData.DetailParameter.customDelimeter);
         }
     }
 
@@ -165,6 +205,74 @@ DTCODE000022 COCA COLA CLASSIC
         public List<string> SummaryDataStart { get; set; }
         public List<string> SummaryDataEnd { get; set; }
         public List<string> SummaryDataExclusivePhrases { get; set; }
-        public List<string> DetailDataExclusivePhrases { get; set; }        
+        public List<string> DetailDataExclusivePhrases { get; set; }
+        public ParameterDetail DetailParameter { get; set; }
+        public ParameterSummary SummaryParameter { get; set; }
+
+        public DetailLine DetailLines { get; set; }
+        public SummaryLine SummaryLines { get; set; }
     }
+
+    public class ParameterDetail
+    {
+        public List<string> SalePriceSuffix { get; set; }
+        public List<string> UnitPriceSuffix { get; set; }
+        public List<string> RemovedList { get; set; }
+        public int IgnoreStartPoistion { get; set; }
+        public Dictionary<string, string> ReplaceList { get; set; }
+        public string itemCodepattern { get; set; }
+        public bool isExistItemCode { get; set; }
+        public string customDelimeter { get; set; }
+    }
+
+    public class ParameterSummary
+    {
+        public Dictionary<string, string> ReplaceList { get; set; }
+    }
+
+    public class DetailLine
+    {
+        public List<Line> Lines { get; set; }
+    }
+
+    public class SummaryLine
+    {
+        public List<Line> Lines { get; set; }
+    }
+
+    public class Line
+    {
+        public List<Item> Items { get; set; }
+    }
+
+    public class Item
+    {
+        public string Value { get; set; }
+        public attribute Attribute { get; set; }
+    }
+
+    public class attribute
+    {
+        public string type { get; set; }
+        public string empty { get; set; }
+        public string order { get; set; }
+    }
+
+    public class MassageParameter
+    {
+        public string[] unnecessarySymbols = new string[] { "$" };
+        public List<string> SalePriceSuffix { get; set; }
+        public List<string> UnitPriceSuffix { get; set; }
+        public List<string> RemovedList { get; set; }
+        public int IgnoreStartPoistion { get; set; }
+        public Dictionary<string, string> ReplaceList { get; set; }
+        public string itemCodepattern { get; set; }
+        public bool isExistItemCode { get; set; }
+        public string customDelimeter { get; set; }
+        public string description { get; set; }
+
+        // summary
+        public Dictionary<string, string> SummaryReplaceList { get; set; }
+    }
+
 }
