@@ -5,73 +5,98 @@ import clr
 clr.AddReference("System.Core")
 clr.ImportExtensions(System.Linq)
 
+
 from System.Collections.Generic import *
 from System.Collections import *
 from System.Linq import *
 
 # Python
 import re
+from baseClass import *
 # from Queue import *
 
-class receiptParser:
-    def preParse(self, parseDefinitionData, receiptString):    
+class receiptParser(baseParser):
+
+    def __init__(self):
+        self.__parseDefinitionData = None
+        self.__receiptString = ""
+    
+    @property
+    def parseDefinitionData(self):
+        return self.__parseDefinitionData
+
+    @parseDefinitionData.setter
+    def parseDefinitionData(self,clr):
+        self.__parseDefinitionData = clr
+
+    @property
+    def receiptString(self):
+        return self.__receiptString
+
+    @receiptString.setter
+    def receiptString(self,clr):
+        self.__receiptString = clr
+
+    
+
+    def preParse(self):    
         try:
             # filtering
-            if parseDefinitionData.ExclusiveReceiptPhrases and parseDefinitionData.ExclusiveReceiptPhrases.Count > 0:
-                for member in parseDefinitionData.ExclusiveReceiptPhrases:
+            if self.parseDefinitionData.ExclusiveReceiptPhrases and self.parseDefinitionData.ExclusiveReceiptPhrases.Count > 0:
+                for member in self.parseDefinitionData.ExclusiveReceiptPhrases:
                     if member:
-                        if receiptString.Contains(member) > -1:
-                            receiptString = receiptString.Replace(member.Trim(), "")
+                        if self.receiptString.Contains(member) > -1:
+                            self.receiptString = self.receiptString.Replace(member.strip(), "")
 
             # remove
-            if parseDefinitionData.RemovedList and parseDefinitionData.RemovedList.Count > 0:
-                for member in parseDefinitionData.RemovedList:
+            if self.parseDefinitionData.RemovedList and self.parseDefinitionData.RemovedList.Count > 0:
+                for member in self.parseDefinitionData.RemovedList:
                     if member:
-                        receiptString = receiptString.Replace(member.Trim(), "")
+                        self.receiptString = self.receiptString.Replace(member.strip(), "")
 
             # replace
-            if  parseDefinitionData.ReceiptReplaceList and parseDefinitionData.ReceiptReplaceList.Count > 0:
-                for member in parseDefinitionData.ReceiptReplaceList:
+            if  self.parseDefinitionData.ReceiptReplaceList and self.parseDefinitionData.ReceiptReplaceList.Count > 0:
+                for member in self.parseDefinitionData.ReceiptReplaceList:
                     if member:
-                        receiptString.Replace(member.Key, member.Value)
+                        self.receiptString.Replace(member.Key, member.Value)
                                     
-            return receiptString
+            return self.receiptString
         except CustomError as e:
             return e
     
-    def GetAllDetailSummary(self, parseDefinitionData, receiptString):
-            lines = List[System.String]()
-            startLineNo = 0
-            try:
-                if parseDefinitionData.ItemStartLineNo:
-                    startLineNo = int(parseDefinitionData.ItemStartLineNo)
+    def GetAllDetailSummary(self):
+        lines = List[System.String]()
+        startLineNo = 0
+        try:
+            if self.parseDefinitionData.ItemStartLineNo:
+                startLineNo = int(self.parseDefinitionData.ItemStartLineNo)
 
-                if (startLineNo > 0):
-                    # 1. using ItemStartLineNo & ItemEndLineText
-                    skipCount = startLineNo
+            if (startLineNo > 0):
+                # 1. using ItemStartLineNo & ItemEndLineText
+                skipCount = startLineNo
 
-                    # ref: https://stackoverflow.com/questions/4998629/python-split-string-with-multiple-delimiters
-                    lines = re.split('\n|\r\n|\r',receiptString).ToList[System.String]()                                        
-                    itemEndLine = lines.FindIndex(lambda x: x.Contains(parseDefinitionData.ItemEndLineText))
+                # ref: https://stackoverflow.com/questions/4998629/python-split-string-with-multiple-delimiters
+                lines = re.split('\n|\r\n|\r',self.receiptString).ToList[System.String]()                                        
+                itemEndLine = lines.FindIndex(lambda x: x.Contains(self.parseDefinitionData.ItemEndLineText))
 
-                    if (itemEndLine == 0):
-                        itemEndLine = lines.Count
+                if (itemEndLine == 0):
+                    itemEndLine = lines.Count
 
-                    itemEndLine = itemEndLine - skipCount
-                    lines = lines.Skip(skipCount).Take(itemEndLine).ToList[System.String]()                
+                itemEndLine = itemEndLine - skipCount
+                lines = lines.Skip(skipCount).Take(itemEndLine).ToList[System.String]()                
 
-                if (lines and lines.Count > 0):
-                    # 2. exclusive
-                    if (parseDefinitionData.ExclusivePhrases and parseDefinitionData.ExclusivePhrases.Count > 0 and parseDefinitionData.ExclusivePhrases.Where(lambda x: x).Any()):
-                        lines = lines.TakeWhile(lambda x: not parseDefinitionData.ExclusivePhrases.Where(lambda y: x.Contains(y)).Any()).ToList<string>()
+            if (lines and lines.Count > 0):
+                # 2. exclusive
+                if (self.parseDefinitionData.ExclusivePhrases and self.parseDefinitionData.ExclusivePhrases.Count > 0 and self.parseDefinitionData.ExclusivePhrases.Where(lambda x: x).Any()):
+                    lines = lines.TakeWhile(lambda x: not self.parseDefinitionData.ExclusivePhrases.Where(lambda y: x.Contains(y)).Any()).ToList<string>()
 
-                    # 3. inclusive
-                    if (parseDefinitionData.InclusivePhrases and parseDefinitionData.InclusivePhrases.Count > 0 and parseDefinitionData.InclusivePhrases.Where(lambda x: x).Any()):
-                        lines = lines.TakeWhile(lambda x: parseDefinitionData.InclusivePhrases.Where(lambda y : x.Contains(y)).Any()).ToList<string>()
+                # 3. inclusive
+                if (self.parseDefinitionData.InclusivePhrases and self.parseDefinitionData.InclusivePhrases.Count > 0 and self.parseDefinitionData.InclusivePhrases.Where(lambda x: x).Any()):
+                    lines = lines.TakeWhile(lambda x: self.parseDefinitionData.InclusivePhrases.Where(lambda y : x.Contains(y)).Any()).ToList<string>()
                 
-            except CustomError as e:
-                return e
-            return lines
+        except CustomError as e:
+            return e
+        return lines
 
     def GetSplitDetailSumary(self, allDetailSummary, parseDefinitionData):
         try:
@@ -81,10 +106,10 @@ class receiptParser:
             iSummaryDataStart = 0
             iSummaryDataEnd = 0
             if (parseDefinitionData.SummaryDataStart and parseDefinitionData.SummaryDataStart.Count > 0):
-                iSummaryDataStart = allDetailSummary.FindIndex(lambda x : parseDefinitionData.SummaryDataStart.Where(lambda y: x.ToLower().Trim().StartsWith(y.ToLower().Trim())).Any())
+                iSummaryDataStart = allDetailSummary.FindIndex(lambda x : parseDefinitionData.SummaryDataStart.Where(lambda y: x.ToLower().strip().StartsWith(y.ToLower().strip())).Any())
 
             if (parseDefinitionData.SummaryDataEnd and parseDefinitionData.SummaryDataEnd.Count > 0):
-                iSummaryDataEnd = allDetailSummary.FindIndex(lambda x : parseDefinitionData.SummaryDataEnd.Where(lambda y : x.ToLower().Trim().StartsWith(y.ToLower().Trim())).Any()) + 1
+                iSummaryDataEnd = allDetailSummary.FindIndex(lambda x : parseDefinitionData.SummaryDataEnd.Where(lambda y : x.ToLower().strip().StartsWith(y.ToLower().strip())).Any()) + 1
 
             itemEndLine = iSummaryDataStart
             itemEndLine = itemEndLine - skipCount
@@ -143,7 +168,7 @@ class receiptParser:
             return None
         except CustomError as e:
             return e
-    def MassageDetail(self, items,  parameter):
+    def MassageDetail(self, items, parameter):
         try:
             result = List[System.String]()
             previous = ""
@@ -160,15 +185,19 @@ class receiptParser:
 
                 lastDoubleString = ""
                 if ( not parameter.isExistItemCode):
-                    lastDoubleString = GetLastDoubleString(modifiedSentence)
+                    lastDoubleString = self.GetLastDoubleString(modifiedSentence)
+                else:
                     if (parameter.itemCodepattern):
-                        itemCode = GetItemCode(modifiedSentence, parameter.itemCodepattern)
+                        itemCode = self.GetItemCode(modifiedSentence, parameter.itemCodepattern)
 
-                        # itemCode should be excluded from GetLastDoubleString(modifiedSentence)                        
-                        lastDoubleString = GetLastDoubleString(modifiedSentence.Substring(0, modifiedSentence.IndexOf(itemCode)) + modifiedSentence.Substring(modifiedSentence.IndexOf(itemCode) + itemCode.Length))
+                        # itemCode should be excluded from GetLastDoubleString(modifiedSentence)     
+                        codeIndex = modifiedSentence.index(itemCode) 
+                                                
+                        lastDoubleString = modifiedSentence[0:codeIndex] + modifiedSentence[codeIndex + len(itemCode):]
+                        lastDoubleString = self.GetLastDoubleString(lastDoubleString)
 
                 if (lastDoubleString):
-                    isSalePrice = IsSalePrice(modifiedSentence, lastDoubleString)
+                    isSalePrice = self.IsSalePrice(modifiedSentence, lastDoubleString)
                     if (isSalePrice): # main item line
                         current = current + " " + modifiedSentence if current else current + modifiedSentence
                         result.Add(current)
@@ -186,7 +215,7 @@ class receiptParser:
             # 6. add customer delimeter
             # 7. pattern ??
             if (result.Count > 0):
-                return AdjustLineItem(result);
+                return self.AdjustLineItem(result);
             
             return result;
             
@@ -205,9 +234,9 @@ class receiptParser:
 
     def IsSalePrice(self, lineString, doubleString):
         try:
-            afterDoublstring = lineString.Substring(lineString.LastIndexOf(doubleString) + doubleString.Length).Trim()
+            afterDoublstring = lineString[lineString.rindex(doubleString) + len(doubleString): ].strip()
             if (not afterDoublstring):
-                return true
+                return True
 
             return parameter.SalePriceSuffix.Where(lambda x : x == afterDoublstring).Any()
         except CustomError as e:
@@ -223,7 +252,7 @@ class receiptParser:
 
             # detail only
             for i in range(0,Itemlines.Count): 
-                # currentLine = Itemlines[i].Trim().Split([customeDelimeter], StringSplitOptions.RemoveEmptyEntries)
+                # currentLine = Itemlines[i].strip().Split([customeDelimeter], StringSplitOptions.RemoveEmptyEntries)
                 currentLine = re.split(customeDelimeter,Itemlines[i]) 
                 
                 parserLine = detailLineParser.Lines[0]
@@ -247,14 +276,14 @@ class receiptParser:
         try:
             newList = List[System.String]()
             for sentence in items:            
-                lastDoubleString = GetLastDoubleString(sentence)
-                lastDecimal = decimal.Parse(lastDoubleString)
+                lastDoubleString = self.GetLastDoubleString(sentence)
+                lastDecimal = float(lastDoubleString)
                 # 1. exclude if sale price is 0 or 0.00 
                 if lastDecimal == 0 or lastDecimal == 0:
                     continue
                 else:
                     # 2. add at sign if there is no sign
-                    modifiedSentence = AddAtSign(sentence)
+                    modifiedSentence = self.AddAtSign(sentence)
 
                     # 3. Remove 
                     if (parameter.RemovedList.Count > 0):
@@ -264,9 +293,9 @@ class receiptParser:
 
                     # 4. ignore start character
                     if (parameter.IgnoreStartPoistion > -1):
-                        locationOfFirstSpace = modifiedSentence.Substring(parameter.IgnoreStartPoistion).IndexOf(' ')
+                        locationOfFirstSpace = modifiedSentence[parameter.IgnoreStartPoistion: ].index(' ')
                         length = locationOfFirstSpace - parameter.IgnoreStartPoistion
-                        shouldBeIgnored = modifiedSentence.Substring(parameter.IgnoreStartPoistion, length)
+                        shouldBeIgnored = modifiedSentence[parameter.IgnoreStartPoistion: length + 1]
                         modifiedSentence = modifiedSentence.Replace(shouldBeIgnored, "")
 
                     # 6. Replace
@@ -293,32 +322,32 @@ class receiptParser:
     
     def AddAtSign(self, sentence):
         try:
-            if (sentence.IndexOf("@") < 0):
-                lastDoubleString = GetLastDoubleString(sentence);
-                front = sentence.Substring(0, sentence.IndexOf(lastDoubleString));
-                back = sentence.Substring(sentence.IndexOf(lastDoubleString));
+            if (sentence.index("@") < 0):
+                lastDoubleString = self.GetLastDoubleString(sentence);
+                front = sentence[ :sentence.index(lastDoubleString) + 1];
+                back = sentence[sentence.index(lastDoubleString): ];
                 atSign = string.Format("1@{0} ", lastDoubleString);
                 sentence = front + atSign + back;
-            return sentence.Trim();
+            return sentence.strip();
         except CustomError as e:
             return e
     def GetLastDoubleString(self, sentence):
         try:
             lines = re.split(r"[^0-9\.]+",sentence)
-            doubleArray = lines.Where(lambda c : c != "." and c.Trim())
+            doubleArray = lines.Where(lambda c : c != "." and c.strip())
             return doubleArray.LastOrDefault[System.String]()
         except CustomError as e:
             return e
     def AddCustomDelimeter(sentence, lastDecimal):
         try:
             splitted = sentence.Split(['@'])
-            count = GetLastDoubleString(splitted[0]).Trim() # count
-            itemCode = GetItemCode(sentence, parameter.itemCodepattern)
+            count = self.GetLastDoubleString(splitted[0]).strip() # count
+            itemCode = self.GetItemCode(sentence, parameter.itemCodepattern)
             if (string.IsNullOrEmpty(itemCode)): # no item code
-                splitted[0] = splitted[0].Trim().Substring(0, splitted[0].Trim().LastIndexOf(count)) + parameter.customDelimeter + count;            
+                splitted[0] = splitted[0].strip()[0: splitted[0].strip().rindex(count) + 1] + parameter.customDelimeter + count;            
             else: # item code exist
-                splitted[0] = splitted[0].Trim().Substring(splitted[0].Trim().IndexOf(itemCode), itemCode.Length) + \
-                    parameter.customDelimeter + splitted[0].Trim().Substring(itemCode.Length, splitted[0].Trim().LastIndexOf(count) - itemCode.Length) + \
+                splitted[0] = splitted[0].strip()[splitted[0].strip().index(itemCode): itemCode.Length + 1] + \
+                    parameter.customDelimeter + splitted[0].strip()[itemCode.Length: (splitted[0].strip().rindex(count) - itemCode.Length) + 1] + \
                     parameter.customDelimeter + count
 
             salePrice = ""
@@ -326,43 +355,43 @@ class receiptParser:
             if (parameter.SalePriceSuffix and parameter.SalePriceSuffix.Count > 0):
                 for member in parameter.SalePriceSuffix:
                     if (member):
-                        if (splitted[1].Trim().IndexOf(member, StringComparison.InvariantCultureIgnoreCase) > -1): # sale price + salePriceSuffix
-                            salePrice = GetLastDoubleString(splitted[1]).Trim() # sale price
-                            extra = splitted[1].Trim().Substring(splitted[1].Trim().LastIndexOf(member), member.Length).Trim()
-                            splitted[1] = splitted[1].Trim().Substring(0, splitted[1].Trim().LastIndexOf(salePrice)) + parameter.customDelimeter + salePrice + parameter.customDelimeter + extra
+                        if (splitted[1].strip().index(member, StringComparison.InvariantCultureIgnoreCase) > -1): # sale price + salePriceSuffix
+                            salePrice = self.GetLastDoubleString(splitted[1]).strip() # sale price
+                            extra = splitted[1].strip()[splitted[1].strip().rindex(member): member.Length + 1].strip()
+                            splitted[1] = splitted[1].strip()[0 : splitted[1].strip().rindex(salePrice) + 1] + parameter.customDelimeter + salePrice + parameter.customDelimeter + extra
 
                             suffixSaleFound = True
                             break;
 
                 if (not suffixSaleFound): # just sale price
-                    salePrice = GetLastDoubleString(splitted[1]).Trim() # unit price                
-                    splitted[1] = splitted[1].Trim().Substring(0, splitted[1].Trim().LastIndexOf(salePrice)) + parameter.customDelimeter + salePrice + parameter.customDelimeter + "N/A"
+                    salePrice = self.GetLastDoubleString(splitted[1]).strip() # unit price                
+                    splitted[1] = splitted[1].strip()[0 : splitted[1].strip().rindex(salePrice) + 1] + parameter.customDelimeter + salePrice + parameter.customDelimeter + "N/A"
 
             else: # just sale price
-                salePrice = GetLastDoubleString(splitted[1]).Trim() # unit price                
-                splitted[1] = splitted[1].Trim().Substring(0, splitted[1].Trim().LastIndexOf(salePrice)) + parameter.customDelimeter + salePrice;
+                salePrice = self.GetLastDoubleString(splitted[1]).strip() # unit price                
+                splitted[1] = splitted[1].strip()[0 : splitted[1].strip().rindex(salePrice) + 1] + parameter.customDelimeter + salePrice;
 
             unitPrice = ""
             suffixFound = False
             if (parameter.UnitPriceSuffix and parameter.UnitPriceSuffix.Count > 0):
                 for member in parameter.UnitPriceSuffix:
                     if (member):
-                        if (splitted[1].Trim().IndexOf(member, StringComparison.InvariantCultureIgnoreCase) > -1): # unit price + priceSuffix
-                            unitPrice = GetFirstDoubleString(splitted[1]).Trim(); # unit price
-                            extra = splitted[1].Trim().Substring(splitted[1].Trim().IndexOf(member), member.Length).Trim()
+                        if (splitted[1].strip().index(member, StringComparison.InvariantCultureIgnoreCase) > -1): # unit price + priceSuffix
+                            unitPrice = self.GetFirstDoubleString(splitted[1]).strip(); # unit price
+                            extra = splitted[1].strip()[splitted[1].strip().index(member) : member.Length + 1].strip()
                             splitted[1] = parameter.customDelimeter + unitPrice + parameter.customDelimeter + extra + \
-                                          splitted[1].Trim().Substring(unitPrice.Length + extra.Length + 1).Trim()
+                                          splitted[1].strip()[unitPrice.Length + extra.Length + 1].strip()
                             suffixFound = True;
                             break;
 
                 if (not suffixFound): # just unit price
-                    unitPrice = GetFirstDoubleString(splitted[1]).Trim() # unit price                
-                    splitted[1] = parameter.customDelimeter + unitPrice + parameter.customDelimeter + "N/A" + splitted[1].Trim().Substring(unitPrice.Length)
+                    unitPrice = self.GetFirstDoubleString(splitted[1]).strip() # unit price                
+                    splitted[1] = parameter.customDelimeter + unitPrice + parameter.customDelimeter + "N/A" + splitted[1].strip()[unitPrice.Length: ]
             else: # just unit price
-                unitPrice = GetFirstDoubleString(splitted[1]).Trim() # unit price                
-                splitted[1] = parameter.customDelimeter + unitPrice + splitted[1].Trim().Substring(unitPrice.Length)
+                unitPrice = self.GetFirstDoubleString(splitted[1]).strip() # unit price                
+                splitted[1] = parameter.customDelimeter + unitPrice + splitted[1].strip()[unitPrice.Length: ]
 
-            sentence = string.Format("{0}{1}", splitted[0].Trim(), splitted[1].Trim())
+            sentence = string.Format("{0}{1}", splitted[0].strip(), splitted[1].strip())
 
             return sentence;
         except CustomError as e:

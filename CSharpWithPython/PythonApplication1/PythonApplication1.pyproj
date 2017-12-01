@@ -43,6 +43,9 @@
     <Compile Include="calledFromCSharp\a020atest333.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="calledFromCSharp\baseClass.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="calledFromCSharp\function.py">
       <SubType>Code</SubType>
     </Compile>

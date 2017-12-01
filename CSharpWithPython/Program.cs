@@ -108,16 +108,18 @@ PrintMessage()
             var options = new Dictionary<string, object> { ["Debug"] = true };
             var engine = Python.CreateEngine(options);
 
-            //var paths = engine.GetSearchPaths();
-            //paths.Add(@"C:\Program Files (x86)\IronPython 2.7\");
-            //engine.SetSearchPaths(paths);
-            //engine.ImportModule("Queue");
+            // ref: https://stackoverflow.com/questions/14433393/compiling-all-files-c-ironpython
+            var paths = engine.GetSearchPaths();
+            paths.Add(@"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\");
+            engine.SetSearchPaths(paths);
 
             dynamic scope = engine.CreateScope();
-            // option 3
+            // option 3           
             var filePath = @"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\a020atest333.py";
-            // var filePath = @"G:\Jini\git\Python\PythonApplication_wikidocs_netbook1\function.py";
-            engine.ExecuteFile(filePath, scope);
+
+            // engine.ExecuteFile(filePath, scope);
+            var source = engine.CreateScriptSourceFromFile(filePath);
+            source.Execute(scope);
 
             var parseDefintionData = new ParseDefinitionData
             {
@@ -153,9 +155,9 @@ PrintMessage()
         OCTOBER 16, 2017   11:56        
       SALE #POS-3165     S/P-STAFF      
 ----------------------------------------
-DTCODE000031 CAMEL                      
+034000003402 CAMEL                      
               1.00 @ 12.99         12.99
-DTCODE000022 COCA COLA CLASSIC          
+034000003402 COCA COLA CLASSIC          
               1.00 @ 0.99           0.99
 
                    SUBTOTAL        13.98
@@ -169,30 +171,32 @@ DTCODE000022 COCA COLA CLASSIC
 d0
 ";
             var rp = scope.receiptParser();
+            rp.parseDefinitionData = parseDefintionData;
+            rp.receiptString = receiptString;
 
             // 1. pre parse
-            receiptString = rp.preParse(parseDefintionData, receiptString);
+            receiptString = rp.preParse();
             // Console.WriteLine(receiptString);
 
             // 2. Detail and Summary
             List<string> receiptStrings = new List<string>();
-            receiptStrings = rp.GetAllDetailSummary(parseDefintionData, receiptString);
+            receiptStrings = rp.GetAllDetailSummary();
 
-            //foreach(var member in receiptStrings)
-            //{
-            //    Console.WriteLine(member);
-            //}
+            ////foreach(var member in receiptStrings)
+            ////{
+            ////    Console.WriteLine(member);
+            ////}
 
-            // 3. Split Detail and Summary
-            var splitDetailSummary = rp.GetSplitDetailSumary(receiptStrings, parseDefintionData);
+            //// 3. Split Detail and Summary
+            //var splitDetailSummary = rp.GetSplitDetailSumary(receiptStrings, parseDefintionData);
 
-            // 4. massage receipt detail & parse
-            var detailItem = splitDetailSummary[0];
-            var summaryItem = splitDetailSummary[1];
-            detailItem = rp.CleanDetailItem(detailItem, parseDefintionData);
+            //// 4. massage receipt detail & parse
+            //var detailItem = splitDetailSummary[0];
+            //var summaryItem = splitDetailSummary[1];
+            //detailItem = rp.CleanDetailItem(detailItem, parseDefintionData);
 
-            var massagedReceiptDetail = rp.GetReceiptMassage(parseDefintionData, detailItem, "detail");
-            // ParseResultDetail = GetParseResultDetail(massagedReceiptDetail, parseDefinitionData, parseDefinitionData.DetailParameter.customDelimeter);
+            //var massagedReceiptDetail = rp.GetReceiptMassage(parseDefintionData, detailItem, "detail");
+            //// ParseResultDetail = GetParseResultDetail(massagedReceiptDetail, parseDefinitionData, parseDefinitionData.DetailParameter.customDelimeter);
         }
     }
 
