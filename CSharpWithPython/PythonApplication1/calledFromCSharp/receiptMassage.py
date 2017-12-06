@@ -11,9 +11,13 @@ from System.Linq import *
 
 # Python
 import re
+import sys
+sys.path.append("C:/Python27/Lib/site-packages")
+from asq import *
+
 from error import *
 from modelData import *
-# from Queue import *
+from util import *
 
 class Massage(object):
 
@@ -39,7 +43,7 @@ class Massage(object):
 
     def MassageDetail(self, items):
         try:
-            result = List[System.String]()
+            result = []
             previous = ""
             current = ""
             for sentence in items: # make one line            
@@ -69,7 +73,7 @@ class Massage(object):
                     isSalePrice = self.IsSalePrice(modifiedSentence, lastDoubleString)
                     if (isSalePrice): # main item line
                         current = current + " " + modifiedSentence if current else current + modifiedSentence
-                        result.Add(current)
+                        result.append(current)
                         current = ""
                     else: # sub item line
                         current = current + " " + modifiedSentence
@@ -83,7 +87,7 @@ class Massage(object):
             # 5. Replace
             # 6. add customer delimeter
             # 7. pattern ??
-            if (result.Count > 0):
+            if (len(result) > 0):
                 return self.AdjustLineItem(result);
             
             return result;
@@ -143,7 +147,7 @@ class Massage(object):
 
     def AdjustLineItem(self, items):
         try:
-            newList = List[System.String]()
+            newList = []
             for sentence in items:            
                 lastDoubleString = self.GetLastDoubleString(sentence)
                 lastDecimal = float(lastDoubleString)
@@ -170,7 +174,7 @@ class Massage(object):
                     # 6. Replace
                     if (self.detailParameter.ReplaceList and self.detailParameter.ReplaceList.Count > 0):
                         # tempList = modifiedSentence.Split(new char[] { ' ' }).ToList<string>();
-                        tempList = re.split(' ',modifiedSentence).ToList[System.String]()  
+                        tempList = re.split(' ',modifiedSentence) 
                        
                         #tempList = tempList.Select(lambda x :
                         #    for member in parameter.ReplaceList:                            
@@ -178,13 +182,13 @@ class Massage(object):
                         #            x = member.Value;
                         #    return x
                         #).ToList[System.String]();
-                        tempList2 = List[System.String]()
+                        tempList2 = []
                         for member in parameter.ReplaceList: 
                             for temp in tempList:
                                 if(member.Key.lower() == temp.lower()):
-                                    tempList2.add(member.Value)
+                                    tempList2.append(member.Value)
                                 else:
-                                    tempList2.add(temp)
+                                    tempList2.append(temp)
                         
                         # list to array
                         list_array = []
@@ -195,7 +199,7 @@ class Massage(object):
 
                     # 7. add custom delimeter
                     modifiedSentence = self.AddCustomDelimeter(modifiedSentence, lastDecimal)
-                    newList.Add(modifiedSentence)
+                    newList.append(modifiedSentence)
 
             return newList;
         except CustomError as e:
@@ -290,27 +294,31 @@ class Massage(object):
 
     def MassageSummary(self, items):
         try:
+            list = Convert.toList(items);
             newItems =[]
             tempList = []
             # replace
-            if (self.summaryParameter.ReplaceList and len(self.summaryParameter.ReplaceList) > 0):            
-                for item in items:
-                    for member in self.summaryParameter.ReplaceList:                        
-                        if(item.lower().find(member.lower().key)):
-                            newItems.append(item.replace(member.Key, member.Value))
-                        else:
-                            newItems.append(x)
-            else:
-                newItems = items              
+            if (self.summaryParameter.ReplaceList and len(self.summaryParameter.ReplaceList) > 0):      
+                dict = Convert.toDict(self.summaryParameter.ReplaceList)
+                for item in list:    
+                    for key, value in dict.iteritems():             
+                        if(item.lower().find(key.lower())):
+                            newItems.append(item.replace(key, value))
+                            break
+                        #else:
+                        #    newItems.append(x)          
             
-            #summary last line: e.g. PAID CASH 4.48            
-            tempList = newItems.Where(lambda x : x.strip().startswith("PAID")).ToList[System.String]()
-            newItems = newItems.Where(lambda x : not x.strip().startswith("PAID")).ToList[System.String]()
+            #summary last line: e.g. PAID CASH 4.48      
+                  
+            tempList = query(newItems).where(lambda x : x.strip().startswith("PAID")).to_list()
+            list = query(newItems).where(lambda x : not x.strip().startswith("PAID")).to_list()
 
             if (tempList and len(tempList) == 1):
-                newList = tempList.FirstOrDefault[System.String]().split(' ').ToList[System.String]()
+                newList = tempList[0].split(' ')
                 index = 0;
-                tempList.clear();
+
+                del tempList[:]
+
                 for member in newList:                
                     if (member):                    
                         if (index == 0):
@@ -321,9 +329,9 @@ class Massage(object):
                             tempList.append("{0} {1}".format( "PayAmount", member))                
                         index = index + 1
                 # merge
-                if (len(tempList.Count) > 0):
-                    newItems = items.Union[System.String](tempList).ToList[System.String]();
+                if (len(list)> 0):
+                    list.extend(tempList);
 
-            return newItems;
+            return list;
         except CustomError as e:
-            return e
+            return e        

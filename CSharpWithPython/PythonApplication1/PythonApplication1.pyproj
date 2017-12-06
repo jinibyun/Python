@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test.py</StartupFile>
+    <StartupFile>calledFromCSharp\util.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,10 @@
     <Name>PythonApplication1</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
     <InterpreterId>IronPython|2.7-32</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <DebugStdLib>True</DebugStdLib>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,7 +50,16 @@
     <Compile Include="calledFromCSharp\baseClass.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="calledFromCSharp\function.py">
+    <Compile Include="calledFromCSharp\error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\receiptMassage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\modelData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\util.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="class.py">
@@ -106,9 +119,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="package.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="calledFromCSharp\parser.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="regularExpression\re1.py">

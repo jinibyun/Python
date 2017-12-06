@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
+using System.IO;
 
 namespace CSharpWithPython
 {
@@ -107,15 +108,32 @@ PrintMessage()
             // including breakpoints and stepping through it.
             var options = new Dictionary<string, object> { ["Debug"] = true };
             var engine = Python.CreateEngine(options);
-
-            // ref: https://stackoverflow.com/questions/14433393/compiling-all-files-c-ironpython
-            var paths = engine.GetSearchPaths();
-            paths.Add(@"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\");
-            engine.SetSearchPaths(paths);
-
+                    
             dynamic scope = engine.CreateScope();
             // option 3           
             var filePath = @"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\a020atest333.py";
+
+            // ref: https://stackoverflow.com/questions/14433393/compiling-all-files-c-ironpython
+            //var paths = engine.GetSearchPaths();
+            //paths.Add(@"C:\Jini\git\Python\CSharpWithPython\PythonApplication1\calledFromCSharp\");            
+            //engine.SetSearchPaths(paths);
+
+            // ref: https://stackoverflow.com/questions/1371994/importing-external-module-in-ironpython
+            // NOTE: better than above
+            string dir = Path.GetDirectoryName(filePath);
+            ICollection<string> paths = engine.GetSearchPaths();
+
+            if (!String.IsNullOrWhiteSpace(dir))
+            {
+                paths.Add(dir);
+            }
+            else
+            {
+                paths.Add(Environment.CurrentDirectory);
+            }
+
+            paths.Add(@"C:\Program Files (x86)\IronPython 2.7\Lib");
+            engine.SetSearchPaths(paths);
 
             // engine.ExecuteFile(filePath, scope);
             var source = engine.CreateScriptSourceFromFile(filePath);
@@ -146,6 +164,86 @@ PrintMessage()
                          { "DEBIT CARD", "DEBITCARD" },
                          { "BALANCE DUE", "CHANGE" }
                      }
+                },                  
+                DetailLines = new DetailLine()
+                {
+                     Lines = new List<Line>
+                     {
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                  new Item { Attribute = new attribute{ empty = "NOT NULL", order ="0", type="nvarchar(50)" }, Value = "InventoryId" },
+                                  new Item { Attribute = new attribute{ empty = "NOT NULL", order ="1", type="nvarchar(200)" }, Value = "ProductName" },
+                                  new Item { Attribute = new attribute{ empty = "NOT NULL", order ="2", type="decimal(18,2)" }, Value = "Qty" },
+                                  new Item { Attribute = new attribute{ empty = "NOT NULL", order ="3", type="decimal(18,2)" }, Value = "UnitPrice" },
+                                  new Item { Attribute = new attribute{ empty = "NULL", order ="4", type="nvarchar(20)" }, Value = "TaxSignature" },
+                                  new Item { Attribute = new attribute{ empty = "NOT NULL", order ="5", type="decimal(18,2)" }, Value = "Price" }
+                              }
+                          }
+                     }
+                },
+                SummaryLines = new SummaryLine
+                {
+                     Lines = new List<Line>
+                     {
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "NULL", order ="0", type="decimal(18,2)" }, Value = "SUBTOTAL" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "NULL", order ="1", type="decimal(18,2)" }, Value = "GST" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "NULL", order ="2", type="decimal(18,2)" }, Value = "PST" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "NULL", order ="3", type="decimal(18,2)" }, Value = "TOTAL" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "NULL", order ="4", type="decimal(18,2)" }, Value = "CHANGE" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "nvarchar(20)", order ="5", type="decimal(18,2)" }, Value = "PAID" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "nvarchar(20)", order ="6", type="decimal(18,2)" }, Value = "PayMethod" }
+                              }
+                          },
+                          new Line
+                          {
+                              Items = new List<Item>
+                              {
+                                   new Item { Attribute = new attribute{ empty = "decimal(18,2)", order ="7", type="decimal(18,2)" }, Value = "PayAmount" }
+                              }
+                          }
+                     }
                 }
             };
 
@@ -174,6 +272,11 @@ PrintMessage()
             rp.parseDefinitionData = parseDefintionData;
             rp.receiptString = receiptString;
 
+            rp.Parse();
+
+
+
+            /*
             // 1. pre parse
             receiptString = rp.preParse();
             // Console.WriteLine(receiptString);
@@ -182,21 +285,22 @@ PrintMessage()
             List<string> receiptStrings = new List<string>();
             receiptStrings = rp.GetAllDetailSummary();
 
-            ////foreach(var member in receiptStrings)
-            ////{
-            ////    Console.WriteLine(member);
-            ////}
+            //foreach(var member in receiptstrings)
+            //{
+            //    console.writeline(member);
+            //}
 
-            //// 3. Split Detail and Summary
-            //var splitDetailSummary = rp.GetSplitDetailSumary(receiptStrings, parseDefintionData);
+            // 3. split detail and summary
+            var splitdetailsummary = rp.getsplitdetailsumary(receiptstrings, parsedefintiondata);
 
-            //// 4. massage receipt detail & parse
-            //var detailItem = splitDetailSummary[0];
-            //var summaryItem = splitDetailSummary[1];
-            //detailItem = rp.CleanDetailItem(detailItem, parseDefintionData);
+            // 4. massage receipt detail & parse
+            var detailitem = splitdetailsummary[0];
+            var summaryitem = splitdetailsummary[1];
+            detailitem = rp.cleandetailitem(detailitem, parsedefintiondata);
 
-            //var massagedReceiptDetail = rp.GetReceiptMassage(parseDefintionData, detailItem, "detail");
-            //// ParseResultDetail = GetParseResultDetail(massagedReceiptDetail, parseDefinitionData, parseDefinitionData.DetailParameter.customDelimeter);
+            var massagedreceiptdetail = rp.getreceiptmassage(parsedefintiondata, detailitem, "detail");
+            // parseresultdetail = getparseresultDetail(massagedReceiptDetail, parseDefinitionData, parseDefinitionData.DetailParameter.customDelimeter);
+            */
         }
     }
 

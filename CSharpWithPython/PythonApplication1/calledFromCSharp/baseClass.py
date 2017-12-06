@@ -1,4 +1,4 @@
-# .NET DLL
+## .NET DLL
 import System
 
 import clr
@@ -12,7 +12,8 @@ from System.Linq import *
 # Python
 import re
 import sys
-sys.path.append("C:/users/jini byun/anaconda3/lib/site-packages")
+sys.path.append("C:/Python27/Lib/site-packages")
+from asq import *
 
 from error import *
 from receiptMassage import *
@@ -22,6 +23,7 @@ class baseParser(object):
     def __init__(self):
         self.__parseDefinitionData = None
         self.__receiptString = ""
+        self.__parsingValidationResult = None
     
     @property
     def parseDefinitionData(self):
@@ -39,7 +41,15 @@ class baseParser(object):
     def receiptString(self,clr):
         self.__receiptString = clr
 
-    __receiptStrings = List[System.String]()
+    __receiptStrings = [] #List[System.String]()
+
+    @property
+    def parsingValidationResult(self):
+        return self.__parsingValidationResult
+
+    @parsingValidationResult.setter
+    def parsingValidationResult(self,clr):
+        self.__parsingValidationResult = clr
 
     def Parse(self):
         try:
@@ -69,25 +79,24 @@ class baseParser(object):
             #5. get receipt message
             massagedreceiptdetail = self.GetReceiptMassage(detailitem, "detail");
 
-
             ParseResultDetail = self.GetParseResultDetail(massagedreceiptdetail);
             
             # massage receipt summary & parse
             massagedReceiptSummary = self.GetReceiptMassage(summaryitem, "summary");
-            '''
-            // var summaryParseDefinitionData = GetDynamicParseDefinition(summaryItem, parseDefinitionData, parseXml);
-            ParseResultSummary = GetParseResultSummary(massagedReceiptSummary, parseDefinitionData);
+           
+            # var summaryParseDefinitionData = GetDynamicParseDefinition(summaryItem, parseDefinitionData, parseXml);
+            ParseResultSummary = self.GetParseResultSummary(massagedReceiptSummary);
+            
+            # evaluate
+            self.EvaluateResult(ParseResultDetail, ParseResultSummary);
 
-            // 3. evaluate
-            EvaluateResult(ParseResultDetail, ParseResultSummary);
-            '''
-
+            # finally set evaluate result to ParsingValidation
 
         except CustomError as e:
             return e
 
     def preParse(self):    
-        try:
+        try:           
             # filtering
             if self.parseDefinitionData.ExclusiveReceiptPhrases and self.parseDefinitionData.ExclusiveReceiptPhrases.Count > 0:
                 for member in self.parseDefinitionData.ExclusiveReceiptPhrases:
@@ -245,5 +254,108 @@ class baseParser(object):
                     lst.append(prq)                    
 
             return lst;
+        except CustomError as e:
+            return e
+
+    def GetParseResultSummary(self, SummaryLines):
+        try:
+            SummaryLines = self.CleanSummaryItem(SummaryLines);
+            summaryLineParser = self.parseDefinitionData.SummaryLines;
+            lst = []
+
+            for i, item in enumerate(SummaryLines):      
+                currentLine = item.strip()
+                KeyValue = currentLine.split(" ")
+                summaryKey = KeyValue[0].strip();
+                summaryValue = KeyValue[1].strip();
+
+                # var parserLine = summaryLineParser.Lines[i];
+
+                for k, item in enumerate(summaryLineParser.Lines):
+                    parserLineItem = item.Items[0];
+                    parserLineItemValue = parserLineItem.Value
+                    if (parserLineItemValue.lower() == summaryKey.lower()):
+                        prq = ParserReturnQueue()
+                        prq.Name = parserLineItemValue
+                        prq.Value = summaryValue.replace("$", "") if summaryValue.find("$") else summaryValue
+                        prq.Empty = parserLineItem.Attribute.empty
+                        prq.Order = parserLineItem.Attribute.order
+                        prq.Type = parserLineItem.Attribute.type
+                    
+                        lst.append(prq)                               
+                        break;
+
+            return lst
+        except CustomError as e:
+            return e
+
+    def CleanSummaryItem(self, summaryItem):
+        try:
+            # remove SummaryDataExclusivePhrases
+            # tempList = query(newItems).where(lambda x : x.strip().startswith("PAID")).to_list()
+            summaryItem = query(summaryItem).where(lambda x : x).to_list()
+            list = Convert.toList(self.parseDefinitionData.SummaryDataExclusivePhrases)
+
+            if (list and len(list) > 0):
+                notEmptyList = query(list).where(lambda x : x).to_list()
+                
+                summaryItem = query(summaryItem).where(lambda x : query(notEmptyList).where(lambda y : not x.contains_(y))).to_list()
+
+            return summaryItem
+        except CustomError as e:
+            return e
+
+    def EvaluateResult(self, parseResultDetail, parseResultSummary):
+        try:
+            result = ParsingValidation()
+            detailValidation = [ ]
+            summaryValidation = [ ]
+            for member in parseResultDetail:
+                if (member.Value):
+                    # type & value check
+                    if (member.Type.lower().find("decimal")):
+                        parseResult = TryParse.toFloat(member.Value)
+                        if (not parseResult[1]):                            
+                            detailValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))
+                    elif (member.Type.lower().find("int")):                        
+                        parseResult = TryParse.toInt(member.Value);
+                        if (not parseResult[1]):
+                            detailValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))                    
+                    elif (member.Type.lower().find("bit")):
+                        parseResult = TryParse.toBool(member.Value);
+                        if (not parseResult):
+                            detailValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))               
+                    elif (member.Type.lower().find("datetime")):    
+                        format = "%Y-%m-%d %H:%M:%S"                    
+                        parseResult = TryParse.toDateTime(member.Value, format);
+                        if (not parseResult):
+                            detailValidation.Add("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))
+
+
+            for member in parseResultSummary:            
+                if member.Value:                
+                    # type & value check
+                    if (member.Type.lower().find("decimal")):
+                        parseResult = TryParse.toFloat(member.Value)
+                        if (not parseResult[1]):
+                            summaryValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))
+                    elif (member.Type.lower().find("int")):                        
+                        parseResult = TryParse.toInt(member.Value)
+                        if (not parseResult[1]):
+                            summaryValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))
+                    elif (member.Type.lower().find("bit")):
+                        parseResult = TryParse.toBool(member.Value);
+                        if (not parseResult):
+                            summaryValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))
+                    elif (member.Type.lower().find("datetime")):
+                        format = "%Y-%m-%d %H:%M:%S"   
+                        parseResult = TryParse.toDateTime(member.Value, format)
+                        if (not parseResult):
+                            summaryValidation.append("{0}'s value: {1} does not comply with type {2}.".format(member.Name, member.Value, member.Type))
+
+            result.DetailMessage = detailValidation;
+            result.SummaryMessage = summaryValidation;
+
+            self.parsingValidationResult = result;
         except CustomError as e:
             return e
