@@ -4,14 +4,18 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>909b9577-fa70-422f-83e7-0f5405f54989</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>regularExpression\re2.py</StartupFile>
+    <StartupFile>calledFromCSharp\util.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonApplication1</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
-    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
+    <InterpreterId>IronPython|2.7-32</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <DebugStdLib>True</DebugStdLib>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +42,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="builtinFunction.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\a020atest333.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\baseClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\receiptMassage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\modelData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="calledFromCSharp\util.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="class.py">
@@ -83,6 +105,10 @@
     <Compile Include="inputOutput.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IronPythonTest\2.py" />
+    <Compile Include="IronPythonTest\1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="module1.py">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +127,9 @@
     <Compile Include="regularExpression\re2.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="variable.py">
       <SubType>Code</SubType>
     </Compile>
@@ -110,12 +139,16 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|2.7" />
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+    <InterpreterReference Include="IronPython|2.7-32" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="application\" />
+    <Folder Include="calledFromCSharp\" />
+    <Folder Include="IronPythonTest\" />
     <Folder Include="regularExpression\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
