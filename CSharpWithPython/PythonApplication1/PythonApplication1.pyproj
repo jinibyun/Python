@@ -11,7 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>PythonApplication1</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
-    <InterpreterId>IronPython|2.7-32</InterpreterId>
+    <InterpreterId>
+    </InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <DebugStdLib>True</DebugStdLib>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
@@ -102,6 +103,9 @@
     <Compile Include="if.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="inheritance.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="inputOutput.py">
       <SubType>Code</SubType>
     </Compile>
@@ -136,11 +140,6 @@
     <Compile Include="while.py">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|2.7" />
-    <InterpreterReference Include="Global|PythonCore|3.6" />
-    <InterpreterReference Include="IronPython|2.7-32" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMe.txt" />

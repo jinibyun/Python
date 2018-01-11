@@ -87,10 +87,8 @@ class baseParser(object):
             # var summaryParseDefinitionData = GetDynamicParseDefinition(summaryItem, parseDefinitionData, parseXml);
             ParseResultSummary = self.GetParseResultSummary(massagedReceiptSummary);
             
-            # evaluate
+            # evaluate and finally set evaluate result to ParsingValidation
             self.EvaluateResult(ParseResultDetail, ParseResultSummary);
-
-            # finally set evaluate result to ParsingValidation
 
         except CustomError as e:
             return e

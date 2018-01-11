@@ -23,6 +23,9 @@ class receiptParser(baseParser):
     def Parse(self):
         try:
             baseParser.Parse(self)
+            marks = [90, 25, 67, 45, 80]
+            number = 0 
+            
         except CustomError as e:
             return e   
     
