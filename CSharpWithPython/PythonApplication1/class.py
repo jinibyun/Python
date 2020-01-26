@@ -1,7 +1,16 @@
+print("=========== python class =========== ")
+
+# basic structure
+class FourCal:
+    pass # it means it does not do anything
+
+a = FourCal() # NOTE: when creating object instance and object we do not use "new" keyword as in C# or Java
+print(type(a))
+
 
 class Service:
     secret = "This is screet"    
-    def sum(self, a, b):      # "self" is cannot be skip in class method          
+    def sum(self, a, b):      # NOTE: "self" cannot be skip in class method
         result = a + b
         print("%s + %s = %s" % (a, b, result))
 
@@ -39,7 +48,6 @@ class Service3:
 
 pey = Service3("Doe")
 pey.sum(1, 1)
-
 
 
 # fourCal() class
@@ -82,9 +90,14 @@ print(b.mul())
 print(b.sub())
 print(b.div())
 
+# memory address are different
+print(id(a.first))
+print(id(b.first))
+
+
 
 # class inheritance
-# class className(base className)
+# class className(base className)  NOTE: use parenthesis  -->> ( )
 
 class MoreFourCal(fourCal):
     def pow(self):
@@ -94,6 +107,10 @@ class MoreFourCal(fourCal):
 print("------object c -------")
 c = MoreFourCal()
 c.setData(2, 4)
+print(c.sum())
+print(c.mul())
+print(c.sub())
+print(c.div())
 print(c.pow())
 
 # overriding
@@ -108,3 +125,24 @@ print("------object d -------")
 d = SafeFourCal()
 d.setData(4, 0)
 print(d.div())
+
+# object variable -->> It is like non-static variable (It has already been explained such as "first", "second" variable)
+# class variable -->> It is like static variable in C#, Java
+class Family:
+    lastName = "Byun"
+
+# How to use it
+# 1.
+print(Family.lastName)
+
+# 2
+f = Family()
+f2 = Family()
+
+print (f.lastName)
+print (f2.lastName)
+
+# check if lastName is shared
+print(id(Family.lastName))
+print(id(f.lastName))
+print(id(f2.lastName))

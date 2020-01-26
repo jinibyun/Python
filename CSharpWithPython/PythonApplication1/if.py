@@ -1,4 +1,4 @@
-
+print("===== if statement =======")
 # basic
 money = 1
 if money:
@@ -9,16 +9,16 @@ else:
 # && --->> and  || --->> or
 
 # in
-pocket = ['paper', 'cellphone', 'money']
+pocket = ['paper', 'cellphone', 'money'] #list
 if 'money' in pocket:
     print("taxi")
 else:
     print("walk")
 
 # pass
-pocket = ['paper', 'money', 'cellphone']
+pocket = ('paper', 'money', 'cellphone') #tuple
 if 'money' in pocket:
-    pass
+    pass  # nothing will be done
 else:
     print("xxx")
 
@@ -32,7 +32,12 @@ pocket = ['paper', 'cellphone']
 card = 1
 if 'money' in pocket:
      print("taxi with pocket")
-elif card: 
+elif card: # else if
      print("taxi with card")
 else:
      print("walk")
+
+# conditional expression
+score = 61
+message = "success" if score >= 60 else "failure"
+print(message)

@@ -1,12 +1,16 @@
 # group datatype : set keyword
-# 1. do not allow duplication
-# 2. unordered
+# 1. do not allow duplication  -->> a kind of "distinct"
+# 2. unordered, whereas "list" and "tuple" is ordered
 
 s1 = set([1,2,3,3,3])
 print(s1)
 
 s2 = set("Hello")
 print(s2)
+
+# Note : Empty Group Type
+s = set()
+print(s)
 
 # convert to list. then it can be get using index
 li = list(s1)
@@ -40,5 +44,5 @@ print(s1)
 
 # remove
 s1 = set([1, 2, 3])
-s1.remove(2)
+s1.remove(2) # no indexing on group
 print(s1)

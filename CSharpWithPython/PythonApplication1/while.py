@@ -1,3 +1,4 @@
+print("===== while statement =======")
 treeHit = 0
 while treeHit < 10:
     treeHit = treeHit +1
@@ -17,7 +18,7 @@ prompt = """
 number =0
 while number !=4:
     print(prompt)
-    number = int(input())
+    number = int(input()) # input() is same as console.readline().
 
 # break
 coffee = 10
@@ -28,4 +29,4 @@ while money:
     print("There is %d cup of coffee left" % coffee)
     if not coffee:
         print("No coffee any more")
-        break
+        break  # out of loop

@@ -1,4 +1,5 @@
-# dic = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
+print("===== Data Type Dictionary =======")
+# dic = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}  -->> format is same as JSON
 
 a = {1: "hi"}
 print(a)
@@ -25,15 +26,23 @@ dic = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
 print(dic['name'])
 # NOTE: key CANNOT be duplicated. If so, one of them would be ignored. DO NOT DUPLICATE KEY
 
-# dictionary functions
+# NOTE: tuple can be used as key, but not list because tuple is a kind of constant (not varied) but list can be varied
+# Compare below two cases
+a = {[1,2] : 'hi'} #error
+print(a)
 
+a = {(1,2) : 'hi'} # no error
+print(a)
+
+# dictionary functions
 # key list
 a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}
 print(a.keys())
 
-for k in a.keys():
+for k in a.keys():  # a.keys() returns dict_keys object
     print(k)
-print(list(a.keys())) # a.keys() returns dict_keys object
+
+print(list(a.keys())) # list returns object as "list" format
 
 # value list
 print(a.values()) # a.values() returns dict_keys object
@@ -43,6 +52,11 @@ print(a.items())
 
 a.clear()
 print(a) # empty dictionary -->> { }
+
+# NOTE
+# Empty List : []
+# Empty Tuple: ( )
+# Empty Dicitonary: { }
 
 a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
 print(a.get('namew', 'xxx')) # second parameter is default value.
