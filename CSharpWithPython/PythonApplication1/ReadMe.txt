@@ -26,3 +26,7 @@ ref: https://wikidocs.net/
 
 # ====== python in deep : object, class, package etc =====
 16. class.py
+17. module1.py
+18. module2.py
+18. module3.py
+18. module4.py
