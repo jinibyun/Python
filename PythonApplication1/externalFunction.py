@@ -6,3 +6,11 @@
 # sys2.py
 # pickle.py
 # os.py
+# shutil.py
+# glob.py
+# tempFile.py
+# time.py
+# calendar.py
+# random.py
+# webbrowser.py
+# threading.py
