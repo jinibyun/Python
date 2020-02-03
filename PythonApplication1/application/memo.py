@@ -1,7 +1,11 @@
+# assumption: how to run
 # python memo.py -a "Life is too short"
+# python memo.py -a "You need python"
+
+
 import sys
 
-option = sys.argv[1]
+option = sys.argv[1] #note: sys.argv[0] cotains file name ("memo.py")
 
 #print(option)
 #print(memo)

@@ -34,3 +34,10 @@ ref: https://wikidocs.net/
 22. exception.py
 23. builtinFunction.py
 24. externalFunction.py
+
+
+# ====== Simple Application (go to "application" folder)
+25. ThreeAndFive.py
+26. memo.py
+27. tabTo4.py
+28. sub_dir_search.py

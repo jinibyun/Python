@@ -1,2 +1,4 @@
 Life is too short
 You need a python
+Life is too short
+You need python

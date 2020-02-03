@@ -13,8 +13,8 @@ def search(dirname):
                     print(full_filename)
     except:
         pass
-search("c:/")
 
+# search("c:/")
 
 # tip: easier way than above
 #import os
