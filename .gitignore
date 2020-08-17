@@ -13,3 +13,4 @@ bin
 *.pdf
 obj
 /CSharpWithPython/.vs/CSharpWithPython/v15/*.suo
+/Complete-Python-3-Bootcamp-master/.spyproject/config/backups/*.bak
