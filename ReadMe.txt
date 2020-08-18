@@ -16,4 +16,11 @@ or
 
 2. Open them in vs.code (and install Jupiter extension, which will allow you to run it from VS.Code directly)
 
+Related Zip File: Complete-Python-3-Bootcamp-master.zip
+
+# 3
+udemy
+https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/learn/lecture/5440650#overview
+
+Related Zip File: Py_DS_ML_Bootcamp-master.zip
 
