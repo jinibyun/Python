@@ -14,3 +14,6 @@ bin
 obj
 /CSharpWithPython/.vs/CSharpWithPython/v15/*.suo
 /Complete-Python-3-Bootcamp-master/.spyproject/config/backups/*.bak
+/PythonWeb/djangoweather/weather/lookup/__pycache__
+/PythonWeb/djangoweather/weather/weather/__pycache__
+/PythonWeb/venvs

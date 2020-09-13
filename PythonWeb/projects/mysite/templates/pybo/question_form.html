@@ -1,0 +1,45 @@
+<!-- ---------------------------------------- [edit] ---------------------------------------- -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">Ask Question</h5>
+
+    <!-- if no action of form, it calls same page -->
+    <form method="post" class="post-form my-3">
+        {% csrf_token %}
+        <!--{{ form.as_p }} : form is QuestionForm object which is passed from question_create function (please see views.py)
+        {{ form.as_p }}: It automatically generates html form input tags based on form (QuestionForm object) -->
+        <!-- {{ form.as_p }} -->
+        <!-- following manual form creation will be preferred -->
+
+        <!-- manual form: better -->
+        <!-- In case of error -->
+        {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+            {% for field in form %}
+                {% if field.errors %}
+                <strong>{{ field.label }}</strong>
+                {{ field.errors }}
+                {% endif %}
+            {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject"
+                   value="{{ form.subject.value|default_if_none:'' }}"> <!--default_if_none: ''   if no values, then show '' instead of none -->
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea class="form-control" name="content"
+                      id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}
+<!-- ---------------------------------------------------------------------------------------- -->
