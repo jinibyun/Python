@@ -1,8 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container my-3">
+
+    <div class="row">
+        <div class="col-4">
+            <h4>LogIn</h4>
+        </div>
+        <div class="col-8 text-right">
+            <span>or <a href="{% url 'common:signup' %}">Create an account</a></span>
+        </div>
+    </div>
+
     <form method="post" class="post-form" action="{% url 'common:login' %}">
         {% csrf_token %}
+
+        <!-- logout > ask question > redirect to login (url: /common/login/?next=/pybo/question/create/ )
+        In order to make it possible, we need to pass values in the hidden tag as below
+        -->
+        <input type="hidden" name="next" value="{{ next }}">
+
         {% include "form_errors.html" %}
         <div class="form-group">
             <label for="username">User ID</label>

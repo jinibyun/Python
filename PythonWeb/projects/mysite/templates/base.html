@@ -25,6 +25,12 @@
 <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
 <!-- Bootstrap JS -->
 <script src="{% static 'bootstrap.min.js' %}"></script>
+
+<!-- Javascript Start : By doing it, other inherited page, we can embed javascript code into script block -->
+{% block script %}
+{% endblock %}
+<!-- Javascript End -->
+
 </body>
 </html>
 <!-- ---------------------------------------------------------------------------------------- -->
