@@ -17,3 +17,4 @@ obj
 /PythonWeb/djangoweather/weather/lookup/__pycache__
 /PythonWeb/djangoweather/weather/weather/__pycache__
 /PythonWeb/venvs
+__pycache__
