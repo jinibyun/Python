@@ -31,12 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 # NOTE: Basic Apps when django project is created
 INSTALLED_APPS = [
-    # ---------------------------------------- [edit] ---------------------------------------- #
     # NOTE: It points pybo/apps.py > PyboConfig class. Unless defined, processes related to database is not possible
     'pybo.apps.PyboConfig', # 1st app: pybo
     'common.apps.CommonConfig', # 2nd app: common (authentication)
-    # ---------------------------------------------------------------------------------------- #
-
     'django.contrib.admin',
     'django.contrib.auth', # login and logout app
     'django.contrib.contenttypes',
@@ -128,8 +125,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-# ---------------------------------------- [edit] ---------------------------------------- #
 # After login or logout, redirect user
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-# ---------------------------------------------------------------------------------------- #

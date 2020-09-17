@@ -14,24 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-# ---------------------------------------- [edit] ---------------------------------------- #
 from django.urls import include, path
-# ---------------------------------------------------------------------------------------- #
-
-# ---------------------------------------- [edit] ---------------------------------------- #
 from pybo import views
-# ---------------------------------------------------------------------------------------- #
+from pybo.views import base_views
 
 urlpatterns = [
-    path('', views.index, name='index'),  # '/' path
+    path('', base_views.index, name='index'),  # '/' path
     path('admin/', admin.site.urls),
 
-    # ---------------------------------------- [edit] ---------------------------------------- #
     # path('pybo/', views.index), # mapping between pybo/ and views index() function
                                 # views mean "view"
 
     # better way
     path('pybo/', include('pybo.urls')), # NOTE: once it is added, localhost:8000 does not show basic information
     path('common/', include('common.urls')),
-    # ---------------------------------------------------------------------------------------- #
 ]

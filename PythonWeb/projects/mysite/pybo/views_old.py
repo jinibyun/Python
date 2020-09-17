@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from pybo.models import Question, Answer, Comment
 from .forms import QuestionForm, AnswerForm, CommentForm
-# ---------------------------------------- [edit] ---------------------------------------- #
+
 from django.http import HttpResponse
 
 
@@ -47,7 +47,6 @@ def answer_create(request, question_id):
     """
     question = get_object_or_404(Question, pk=question_id)
 
-    # ---------------------------------------- [edit] ---------------------------------------- #
     if request.method == "POST":
         form = AnswerForm(request.POST)
         if form.is_valid():
@@ -68,7 +67,6 @@ def question_create(request):
     """
     pybo ask question
     """
-    # ---------------------------------------- [edit] ---------------------------------------- #
     if request.method == 'POST':
         form = QuestionForm(request.POST)
         if form.is_valid():
