@@ -1,0 +1,17 @@
+<!DOCTYPE html> <!-- note: do not skip -->
+{% load static %} <!-- settings.py: STATICFILES_DIRS -->
+<html>
+    <head>
+        <meta charset ="utf-8">
+        <title>First App</title>
+        <link rel="stylesheet" href="{% static "css/mystyle.css" %}"">
+    </head>
+
+    <body>
+        <h1>Hello this is index.html</h1>
+        <p>{{ insert_me }}</p>
+
+        <!-- image -->
+        <img src="{% static "images/sample1.jpg "%}" alt="">
+    </body>
+</html>

@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589f19b1-5619-4dc6-9e9e-d0e0b18b466e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/fifth_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/ReadMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/templates/basic_app/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fifth_project/templates/basic_app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../first_project/.idea/first_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/.idea/fourth_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/basic_app/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/basic_app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/templates/basic_app/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/templates/basic_app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/templates/basic_app/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fourth_project/templates/basic_app/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mysite/deployment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/second_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../udemy/docs/Django Level One.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/02-SF Salaries Exercise - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/02-SF Salaries Exercise - Solutions.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/03-Ecommerce Purchases Exercise .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/03-Ecommerce Purchases Exercise .ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/04-Ecommerce Purchases Exercise - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/04-Ecommerce Purchases Exercise - Solutions.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/01-Matplotlib Concepts Lecture.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/01-Matplotlib Concepts Lecture.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/02-Matplotlib Exercises.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/02-Matplotlib Exercises.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReadMe.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Virtual environment.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Virtual environment.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysite/config/settings.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

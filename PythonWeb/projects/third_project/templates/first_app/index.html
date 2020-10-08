@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+{% load my_extras %} {# custom filter: first_app\templatetags\my_extras.py #}
+
+{% block body_block%}
+  <h1>Hello and welcome to the site!</h1>
+    <!-- <h1>This is the index.html page</h1> -->
+  <h1>{{ text|cutout:"world" }}</h1> {# custom filter #}
+  <h1>{{ number |add:99 }}</h1>{# built in filter #}
+{% endblock %}
