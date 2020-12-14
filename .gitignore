@@ -18,3 +18,5 @@ obj
 /PythonWeb/djangoweather/weather/weather/__pycache__
 /PythonWeb/venvs
 __pycache__
+.ipynb_checkpoints
+.idea

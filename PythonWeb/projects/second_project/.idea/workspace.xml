@@ -2,7 +2,223 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589f19b1-5619-4dc6-9e9e-d0e0b18b466e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Exercise/db/06_mysql_create_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/01-loading-the-data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/ReadMe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/generate_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/hw_exam_grades.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/quiz_1_grades.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/quiz_2_grades.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/quiz_3_grades.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/quiz_4_grades.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/quiz_5_grades.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonDataAnalysis/pandas-gradebook-project/data/roster.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/templates/basic_app/basic_app_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/templates/basic_app/school_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/templates/basic_app/school_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/templates/basic_app/school_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fifth_project/basic_app/templates/basic_app/school_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mysite/ReadMe.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/Python Making Query.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/ReadMe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/blog/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sixth_project/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/01_EnglishDictionary/app1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/01_EnglishDictionary/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/ReadMe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/01 Interactive Dictionary/app1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/01 Interactive Dictionary/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/02 Webmap using Python &amp; Folium/Volcanoes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/02 Webmap using Python &amp; Folium/__MACOSX/._Volcanoes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/02 Webmap using Python &amp; Folium/__MACOSX/._app2-web-map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/02 Webmap using Python &amp; Folium/__MACOSX/._world.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/02 Webmap using Python &amp; Folium/app2-web-map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/02 Webmap using Python &amp; Folium/world.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/03 Website blocker/app3-website-blocker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/03 Website blocker/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/Deployment-steps-no-database.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/._Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/._requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/._runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/._script1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/._static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/._templates" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/static/._css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/static/css/._main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/templates/._about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/templates/._home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/__MACOSX/templates/._layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/runtime-link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/script1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/templates/.about.html.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/04 Portfolio website using Python &amp; Flask/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/05 Desktop Database application/backend.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/05 Desktop Database application/books.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/05 Desktop Database application/frontend.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/06 Webcam motion detector/Sample_of_the_produced_time_values.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/06 Webcam motion detector/__MACOSX/._motion_detector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/06 Webcam motion detector/__MACOSX/._plotting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/06 Webcam motion detector/motion_detector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/06 Webcam motion detector/plotting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/07 Scraping real estate property data/app7_webscraping.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/._Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/._requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/._runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/._script1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/._static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/._templates" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/static/._css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/static/css/._main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/templates/._about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/templates/._home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/templates/._layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/__MACOSX/templates/._plot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/runtime-link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/script1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/08 Web based financial graph/templates/plot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/._app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/._psycopg2-2.6.1-cp35-cp35m-win32.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/._send_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/._static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/._templates" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/static/._main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/templates/._index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/__MACOSX/templates/._success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/psycopg2-2.6.1-cp35-cp35m-win32.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/send_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/static/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/app9-datacollector-flask-postgres/templates/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/Sample.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._Sample.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._psycopg2-2.6.1-cp35-cp35m-win32.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._send_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/._templates" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/static/._main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/templates/._download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/templates/._index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/__MACOSX/templates/._success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/psycopg2-2.6.1-cp35-cp35m-win32.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/send_email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/static/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/templates/download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/download-app/templates/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/09 Data collector Webapp using PostGreSQL &amp; Flask/runtime-link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/._app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/._sample_files" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/._static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/._templates" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/sample_files/._.DS_Store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/sample_files/._2016-05-28-14-36-19-014281.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/sample_files/._2016-05-28-14-40-17-833207.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/sample_files/._2017-05-08-10-44-25-734809.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/static/._main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/templates/._download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/__MACOSX/templates/._index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/course-code.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/instructions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/sample_files/2016-05-28-14-36-19-014281.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/sample_files/2016-05-28-14-40-17-833207.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/sample_files/2017-05-08-10-44-25-734809.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/static/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/templates/download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/10 Geocoder web service/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/venv/Scripts/python.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/venv/Scripts/python_d.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/venv/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../RealWorldApplication/The-Python-Mega-Course-Build-10-Real-World-Applications--master/venv/Scripts/pythonw_d.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/06-Modules and Packages/PackageAndModule.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/06-Modules and Packages/PackageAndModule.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/13-Web-Scraping/00-Guide-to-Web-Scraping.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/13-Web-Scraping/00-Guide-to-Web-Scraping.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/13-Web-Scraping/01-Web-Scraping-Exercises.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/13-Web-Scraping/01-Web-Scraping-Exercises.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/13-Web-Scraping/02-Web-Scraping-Exercise-Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Complete-Python-3-Bootcamp-master/13-Web-Scraping/02-Web-Scraping-Exercise-Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/.ipynb_checkpoints/01-NumPy Arrays-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/.ipynb_checkpoints/01-NumPy Arrays-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/01-NumPy Arrays.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/01-NumPy Arrays.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/02-Numpy Indexing and Selection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/02-Numpy Indexing and Selection.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/03-Numpy Operations.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/03-Numpy Operations.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/04-Numpy Exercises.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/04-Numpy Exercises.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/05-Numpy Exercises - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/02-Python-for-Data-Analysis-NumPy/05-Numpy Exercises - Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/02-Series-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/02-Series-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/03-DataFrames-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/03-DataFrames-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/04-Missing Data-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/04-Missing Data-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/08-Data Input and Output-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/.ipynb_checkpoints/08-Data Input and Output-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/01-Introduction to Pandas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/01-Introduction to Pandas.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/02-Series.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/02-Series.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/03-DataFrames.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/03-DataFrames.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/04-Missing Data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/04-Missing Data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/05-Groupby.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/05-Groupby.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/06-Merging, Joining, and Concatenating.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/06-Merging, Joining, and Concatenating.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/07-Operations.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/07-Operations.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/08-Data Input and Output.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/08-Data Input and Output.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/Excel_Sample1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/03-Python-for-Data-Analysis-Pandas/Excel_Sample1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/.ipynb_checkpoints/01-SF Salaries Exercise-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/.ipynb_checkpoints/01-SF Salaries Exercise-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/01-SF Salaries Exercise.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/02-SF Salaries Exercise - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/02-SF Salaries Exercise - Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/03-Ecommerce Purchases Exercise .ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/03-Ecommerce Purchases Exercise .ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/04-Ecommerce Purchases Exercise - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/04-Pandas-Exercises/04-Ecommerce Purchases Exercise - Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/01-Matplotlib Concepts Lecture.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/01-Matplotlib Concepts Lecture.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/02-Matplotlib Exercises.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/02-Matplotlib Exercises.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/03-Matplotlib Exercises - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/03-Matplotlib Exercises - Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/04-Advanced Matplotlib Concepts.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/05-Data-Visualization-with-Matplotlib/04-Advanced Matplotlib Concepts.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/01-Distribution Plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/01-Distribution Plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/02-Categorical Plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/02-Categorical Plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/03-Matrix Plots.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/03-Matrix Plots.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/04-Grids.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/06-Data-Visualization-with-Seaborn/04-Grids.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/01-Pandas Built-in Data Visualization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/01-Pandas Built-in Data Visualization.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/02-Pandas Data Visualization Exercise.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/02-Pandas Data Visualization Exercise.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/03-Pandas Data Visualization Exercise - Solutions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/07-Pandas-Built-in-Data-Viz/03-Pandas Data Visualization Exercise - Solutions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/11-Linear-Regression/01-Linear Regression with Python.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Py-DS-ML-Bootcamp-master/Refactored_Py_DS_ML_Bootcamp-master/11-Linear-Regression/01-Linear Regression with Python.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Virtual environment.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Virtual environment.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/basic_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/basic_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/basic_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/basic_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/basic_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/basic_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/basic_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/basic_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fifth_project/templates/basic_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../fifth_project/templates/basic_app/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysite/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mysite/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../mysite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysite/deployment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,19 +229,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1iYIMNNlodmLWjHsFq1Sxd44FSi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../first_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../CodingLearn_Python_Jaewon/PythonWeb/projects/second_project" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -39,12 +257,15 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="500" y="161" key="FileChooserDialogImpl" timestamp="1602112795689">
-      <screen x="0" y="0" width="1600" height="839" />
+    <state x="2200" y="195" key="FileChooserDialogImpl" timestamp="1603848023666">
+      <screen x="1600" y="0" width="1920" height="1019" />
     </state>
-    <state x="500" y="161" key="FileChooserDialogImpl/1600.0.1920.1019/0.0.1600.839@0.0.1600.839" timestamp="1602112795689" />
-    <state x="2200" y="195" key="FileChooserDialogImpl/1600.0.1920.1019/0.0.1600.839@1600.0.1920.1019" timestamp="1602078135397" />
+    <state x="500" y="161" key="FileChooserDialogImpl/1600.0.1920.1019/0.0.1600.839@0.0.1600.839" timestamp="1603327010976" />
+    <state x="2200" y="195" key="FileChooserDialogImpl/1600.0.1920.1019/0.0.1600.839@1600.0.1920.1019" timestamp="1603848023666" />
     <state x="1922" y="85" key="SettingsEditor" timestamp="1602097048541">
       <screen x="1600" y="0" width="1920" height="1019" />
     </state>
